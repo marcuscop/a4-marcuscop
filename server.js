@@ -9,7 +9,7 @@ const {Pool, Client} = require('pg');
 const connectionString = 'postgres://dqnazyotbfgvxt:485af557f315bf8f783a9e1ec8a006e70a30e25d2f6216ee6a4743bf61c91e0c@ec2-54-225-68-133.compute-1.amazonaws.com:5432/du78o8s03fo04';
 
 const pool = new Pool({
-  connectionString: connectionString 
+  connectionString: connectionString
 });
 
 const client = new Client({
@@ -17,6 +17,20 @@ const client = new Client({
 });
 
 
+var query_string = "CREATE TABLE gpx (id SERIAL PRIMARY KEY, lon VARCHAR(100) NOT NULL, lat VARCHAR(100) NOT NULL, timeOfDay VARCHAR(100) NOT NULL);"
++ "CREATE TABLE csv ( id  SERIAL PRIMARY KEY, distance VARCHAR(100) NOT NULL, elapsed VARCHAR(100) NOT NULL, strcount VARCHAR(100) NOT NULL, rate VARCHAR(100) NOT NULL, checkf VARCHAR(100) NOT NULL, splspeed VARCHAR(100) NOT NULL, speed VARCHAR(100) NOT NULL, dispstr VARCHAR(100) NOT NULL);";
+pool.connect(function(err, client, done){
+  if(err){
+    return console.error('error fetching client from pool', err);
+  }
+  client.query(query_string, function(err, result){
+    done();
+
+    if(err){
+      return console.error('error running query', err);
+    }
+  });
+});
 
 /*
 const {Pool, Client} = require('pg');
@@ -160,6 +174,7 @@ function get_csv(req, res){
         return console.error('error running query', err);
       }
       res.writeHead(200, {"Content-Type": "application/json"});
+
       res.end(JSON.stringify(result.rows));
     });
   });
