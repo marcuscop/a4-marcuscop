@@ -1,0 +1,72 @@
+<html lang = en>
+
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script src="js/index.js"></script>
+
+<div class="header">
+    	<h1>Practice Evaluator</h1>
+    	<p><i>-for WPI rowing-</i></p>
+
+</div>
+
+</head>
+
+<body>
+  <style>
+    #info-box {
+      background-color: white;
+      border: 1px solid black;
+      bottom: 50px;
+      height: 50px;
+      width: auto;
+      padding: 10px;
+      position: absolute;
+      margin-bottom: 160px;
+      left: 50px;
+    }
+    #map{
+      height: 400px;
+      width: 100%;
+    }
+
+    p{
+      color: green;
+    }
+  </style>
+
+  <div id="map"></div>
+
+  <br>
+
+  <button onclick="clearAll()">Reset</button><p style="color:black;">(Click to clear the database. Do this if something went wrong, after you reload the page.)</p>
+
+
+  <h2>Add GPX file here</h2>
+      <form>
+        <input type="file" id="gpx" />
+      </form>
+      <button onclick="gpx()">Submit</button>
+      <p id="gpxsubmit"><p>
+
+  <h2>Add CSV file here</h2>
+      <form>
+        <input type="file" id="csv" />
+      </form>
+      <button onclick="csv()">Submit</button>
+      <p id="csvsubmit"><p>
+
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoxcnAFDdiYpP3LUr6iIi7C6SqVmQuuJg&callback=initMap"
+  type="text/javascript">
+      </script>
+
+      <br>
+      <br>
+      <button onclick="prep()">Render The Map</button>
+      <br>
+      <br>
+      <div id="display">
+      <div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "a4-webapp",
+  "version": "1.0.0",
+  "description": "Assignment 4 - Real Web Apps: Designing for an Area of Life   ===",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcuscop/a4-webapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "^1.2.1",
+    "pg": "^7.4.3"
+  },
+  "bugs": {
+    "url": "https://github.com/marcuscop/a4-webapp/issues"
+  },
+  "homepage": "https://github.com/marcuscop/a4-webapp#readme"
+}

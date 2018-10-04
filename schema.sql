@@ -1,0 +1,18 @@
+CREATE TABLE gpx (
+  id      SERIAL PRIMARY KEY,
+  lon     VARCHAR(100) NOT NULL,
+  lat     VARCHAR(100) NOT NULL,
+  timeOfDay VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE csv (
+  id  SERIAL PRIMARY KEY,
+  distance VARCHAR(100) NOT NULL,
+  elapsed VARCHAR(100) NOT NULL,
+  strcount VARCHAR(100) NOT NULL,
+  rate VARCHAR(100) NOT NULL,
+  checkf VARCHAR(100) NOT NULL,
+  splspeed VARCHAR(100) NOT NULL,
+  speed VARCHAR(100) NOT NULL,
+  dispstr VARCHAR(100) NOT NULL
+);
