@@ -221,7 +221,7 @@ function get_gpx(){
   xhr.send();
 
   function handle_res(){
-    if(this.readyState != 4) return;
+    if(this.readyState != 4){ console.log(this.readyState); return;}
     //gpxdata = JSON.parse(this.responseText);
     console.log(this.responseText);
 
