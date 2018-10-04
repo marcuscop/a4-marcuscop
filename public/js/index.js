@@ -107,7 +107,7 @@ function polish_gpxdata(){
 function displayPath(){
 
   //console.log(gpxdata);
-  /*polish_csvdata(); // cut out the decimals
+  polish_csvdata(); // cut out the decimals
 
   polish_gpxdata(); // adjust the gpx time to be elapsed time
 
@@ -148,7 +148,7 @@ function displayPath(){
   }// gpx
 
   lilyPath.setMap(map);
-  */
+
   clearAll();
 }
 
@@ -218,7 +218,7 @@ function get_gpx(){
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function(){
     if(this.readyState != 4){ console.log(this.readyState); return;}
-    //gpxdata = JSON.parse(this.responseText);
+    gpxdata = JSON.parse(this.responseText);
     console.log(this.responseText);
 
     if(this.status != 200){
@@ -240,7 +240,7 @@ function get_csv(){
 
   function handle_res(){
     if(this.readyState != 4) return;
-    //csvdata = JSON.parse(this.responseText);
+    csvdata = JSON.parse(this.responseText);
     console.log(this.responseText);
 
     if(this.status != 200){
