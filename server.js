@@ -13,8 +13,11 @@ var fs = require('fs');
 
   const client = new Client({
     connectionString: connectionString,
-    ssl: true
-  })
+  });
+
+  const pool = new Pool({
+    connectionString: connectionString,
+  });
 
 
 /*
