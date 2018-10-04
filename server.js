@@ -1,41 +1,41 @@
 var http = require('http')
   , fs   = require('fs')
   , url  = require('url')
-  , port = 5432;
-
-
-  const {Pool, Client} = require('pg');
-  const connectionString = 'postgres://dqnazyotbfgvxt:485af557f315bf8f783a9e1ec8a006e70a30e25d2f6216ee6a4743bf61c91e0c@ec2-54-225-68-133.compute-1.amazonaws.com:5432/du78o8s03fo04';
-
-  const pool = new Pool({
-    connectionString: connectionString,
-  });
-
-  const client = new Client({
-    connectionString: connectionString,
-  });
+  , port = 8080;
 
 
 /*
-
 const {Pool, Client} = require('pg');
+const connectionString = 'postgres://dqnazyotbfgvxt:485af557f315bf8f783a9e1ec8a006e70a30e25d2f6216ee6a4743bf61c91e0c@ec2-54-225-68-133.compute-1.amazonaws.com:5432/du78o8s03fo04';
 
 const pool = new Pool({
-    user: 'dqnazyotbfgvxt',
-    host: 'ec2-54-225-68-133.compute-1.amazonaws.com',
-    database: 'du78o8s03fo04',
-    password: '485af557f315bf8f783a9e1ec8a006e70a30e25d2f6216ee6a4743bf61c91e0c',
-    port: 5432
+  connectionString: connectionString,
 });
 
 const client = new Client({
-    user: 'dqnazyotbfgvxt',
-    host: 'ec2-54-225-68-133.compute-1.amazonaws.com',
-    database: 'du78o8s03fo04',
-    password: '485af557f315bf8f783a9e1ec8a006e70a30e25d2f6216ee6a4743bf61c91e0c',
-    port: 5432
+  connectionString: connectionString,
 });
+
+
 */
+const {Pool, Client} = require('pg');
+
+const pool = new Pool({
+    user: 'marcreardon',
+    host: 'localhost',
+    database: 'marcreardon',
+    password: 'password'
+});
+
+const client = new Client({
+    user: 'marcreardon',
+    host: 'localhost',
+    database: 'marcreardon',
+    password: 'password'
+});
+
+
+
 var server = http.createServer (function (req, res) {
 
   var uri = url.parse(req.url)
