@@ -27,6 +27,7 @@ function prep(){
 }
 
 function polish_csvdata(){
+  console.log(csvdata[0]);
   var i;
   var newdata;
   for(i=0;i<csvdata.length;i++){
@@ -120,11 +121,7 @@ function displayPath(){
   var i, j;
   var path = lilyPath.getPath();
   var myLatLng;
-  var marker;
-  var popup;
   var infowindow;
-  var cityCircle;
-  var circle;
   var split;
 
   for(i=0;i<gpxdata.length;i++){
@@ -135,46 +132,7 @@ function displayPath(){
     for(j=0;j<csvdata.length;j++){
       if(csvdata[j].elapsed == gpxdata[i].timeofday){
         split = csvdata[j].splspeed;
-        /*console.log(csvdata[j].elapsed);
-        console.log(gpxdata[i].timeofday);*/
-        // create a data points
-
-        /*circle = {
-          path: 'M 0, 0 m -10, 0 a 10, 10 0 1, 0 20, 0 a 10, 10 0 1, 0 -20, 0',
-          fillColor: 'yellow',
-          fillOpacity: 0.8,
-          scale: 1,
-          strokeColor: 'yellow',
-          strokeWeight: 0.2
-        };
-
-        marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: split,
-          icon: circle
-        });
-
         infowindow = new google.maps.InfoWindow({
-            content: split
-        });
-
-        //console.log(csvdata[j].splspeed);
-
-
-        marker.addListener('mouseover', function(){
-          infowindow.open(map, this);
-        });
-
-        marker.addListener('mouseout', function() {
-          infowindow.close();
-        });
-
-        //infowindow.setContent(split);
-
-
-
-        */infowindow = new google.maps.InfoWindow({
             content: split,
             position: myLatLng,
             map: map
