@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marcuscop/a4-webapp.git"
+    "url": "git+https://github.com/marcuscop/a4-marcuscop.git"
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +16,7 @@
     "pg": "^7.4.3"
   },
   "bugs": {
-    "url": "https://github.com/marcuscop/a4-webapp/issues"
+    "url": "https://github.com/marcuscop/a4-marcuscop/issues"
   },
-  "homepage": "https://github.com/marcuscop/a4-webapp#readme"
+  "homepage": "https://github.com/marcuscop/a4-marcuscop#readme"
 }
