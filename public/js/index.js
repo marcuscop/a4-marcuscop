@@ -169,6 +169,7 @@ function gpx(){
     xhr.onreadystatechange = handle_res
     xhr.open("POST", "/uploadgpx");
     xhr.send(data);
+    console.log(data);
 
     function handle_res(){
       if(this.readyState != 4) return;
@@ -199,6 +200,7 @@ function csv(){
     xhr.onreadystatechange = handle_res
     xhr.open("POST", "/uploadcsv");
     xhr.send(data);
+    console.log(data);
 
     function handle_res(){
       if(this.readyState != 4) return;
