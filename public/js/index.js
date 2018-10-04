@@ -216,11 +216,7 @@ function csv(){
 function get_gpx(){
 
   var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = handle_res;
-  xhr.open("GET", "/gpx", true);
-  xhr.send();
-
-  function handle_res(){
+  xhr.onreadystatechange = function(){
     if(this.readyState != 4){ console.log(this.readyState); return;}
     //gpxdata = JSON.parse(this.responseText);
     console.log(this.responseText);
@@ -228,7 +224,10 @@ function get_gpx(){
     if(this.status != 200){
       console.log("ERROR: State 4 of request");
     }
-  }
+  };
+  xhr.open("GET", "/gpx", true);
+  xhr.send();
+
 
 }
 
