@@ -32,24 +32,6 @@ pool.connect(function(err, client, done){
   });
 });
 
-/*
-const {Pool, Client} = require('pg');
-
-const pool = new Pool({
-    user: 'marcreardon',
-    host: 'localhost',
-    database: 'marcreardon',
-    password: 'password'
-});
-
-const client = new Client({
-    user: 'marcreardon',
-    host: 'localhost',
-    database: 'marcreardon',
-    password: 'password'
-});
-
-*/
 
 var server = http.createServer (function (req, res) {
 

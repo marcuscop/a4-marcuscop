@@ -1,15 +1,3 @@
-
-1. Fork the starting project repo.
-2. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page, it displays correctly.
-4. Deploy your project to Heroku or equivalent hosting platform.
-5. **Ensure that your project has the proper naming scheme `a4-yourGitHubName` or `a4-yourTeamName` so we can find it.**
-6. Modify the Readme to the specifications below.
-7. Create and submit a Pull Request to the original repo.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
 ## Marc Reardon | marcuscop | Practice Evaluator
 
 Practice Evaluator
@@ -39,9 +27,8 @@ To solve this problem, the "Practice Evaluator" will
 
 #Notes:
 1. The Practice Evaluator shows only one path at a time.
-2. The page must be refreshed to delete a path from the map.
-3. The Reset button clears the DB. If a file is uploaded in the wrong spot (gpx as csv, csv as gpx), hit Reset.
-4. There are sample .GPX and .CSV files in the SAMPLE_FILES folder. (They contain actual data from WPI Rowings' races this season!!)
+2. Press the Reset button if a file is uploaded in the wrong spot (gpx as csv, csv as gpx).
+3. There are sample .GPX and .CSV files in the SAMPLE_FILES folder. (They contain actual data from WPI Rowings' races this season!!)
    - A single .GPX file corresponds to a single .CSV. They must be used together.
       - Riverfront.gpx -> Riverfront.csv
       - Snake.gpx -> Snake.csv
