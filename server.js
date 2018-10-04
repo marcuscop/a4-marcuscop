@@ -138,6 +138,7 @@ function clear(req, res){
       }
     });
   });
+  res.end();
 }
 
 
