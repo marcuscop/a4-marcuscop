@@ -21,7 +21,7 @@ function prep(){
 
   setTimeout(function(){
     document.getElementById("display").innerHTML = "<p>Rendered!</p> <button onclick='displayPath()'>Display The Map</button>";
-  }, 4000);
+  }, 6000);
 
   //document.getElementById("display").innerHTML = "<button onclick='displayPath()'>Display The Map</button>";
 }
