@@ -70,6 +70,7 @@ function polish_gpxdata(){
   var date, date2;
   var date_string, date_string2;
 
+
   var base_hours = parseFloat(gpxdata[0].timeofday.slice(0, 2));
   var base_minutes = parseFloat(gpxdata[0].timeofday.slice(3, 5));
   var base_seconds = parseFloat(gpxdata[0].timeofday.slice(6, 8));
@@ -104,8 +105,8 @@ function polish_gpxdata(){
 }
 
 function displayPath(){
-
-  //console.log(gpxdata);
+  console.log(csvdata);
+  console.log(gpxdata);
   polish_csvdata(); // cut out the decimals
 
   polish_gpxdata(); // adjust the gpx time to be elapsed time
@@ -263,7 +264,8 @@ function get_gpx(){
   function handle_res(){
     if(this.readyState != 4) return;
     gpxdata = JSON.parse(this.responseText);
-    //console.log(gpxdata);
+
+    console.log(gpxdata);
 
     if(this.status != 200){
       console.log("ERROR: State 4 of request");
