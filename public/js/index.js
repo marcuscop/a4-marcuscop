@@ -27,7 +27,7 @@ function prep(){
 }
 
 function polish_csvdata(){
-  console.log(csvdata[0]);
+  //console.log(csvdata[0]);
   var i;
   var newdata;
   for(i=0;i<csvdata.length;i++){
@@ -139,7 +139,7 @@ function displayPath(){
             //visible: false
         });
 
-        console.log(infowindow.content);
+        //console.log(infowindow.content);
 
       }// if
     }// csv
