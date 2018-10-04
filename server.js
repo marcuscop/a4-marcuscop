@@ -1,7 +1,7 @@
 var http = require('http')
   , fs   = require('fs')
   , url  = require('url')
-  , port = 8080;
+  , port = 5432;
 
 var formidable = require('formidable');
 var fs = require('fs');
@@ -27,14 +27,16 @@ const pool = new Pool({
     user: 'dqnazyotbfgvxt',
     host: 'ec2-54-225-68-133.compute-1.amazonaws.com',
     database: 'du78o8s03fo04',
-    password: '485af557f315bf8f783a9e1ec8a006e70a30e25d2f6216ee6a4743bf61c91e0c'
+    password: '485af557f315bf8f783a9e1ec8a006e70a30e25d2f6216ee6a4743bf61c91e0c',
+    port: 5432
 });
 
 const client = new Client({
     user: 'dqnazyotbfgvxt',
     host: 'ec2-54-225-68-133.compute-1.amazonaws.com',
     database: 'du78o8s03fo04',
-    password: '485af557f315bf8f783a9e1ec8a006e70a30e25d2f6216ee6a4743bf61c91e0c'
+    password: '485af557f315bf8f783a9e1ec8a006e70a30e25d2f6216ee6a4743bf61c91e0c',
+    port: 5432
 });
 
 var server = http.createServer (function (req, res) {
