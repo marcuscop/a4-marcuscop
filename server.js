@@ -16,10 +16,12 @@ const client = new Client({
   connectionString: connectionString,
 });
 
-pool.query('SELECT NOW()', (err, res) => {
+pool.query('select * from gpx;', (err, res) => {
   console.log(err, res)
   pool.end()
 })
+
+console.log("hi");
 
 
 /*
