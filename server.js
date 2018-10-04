@@ -5,7 +5,7 @@ var http = require('http')
 
 
 
-const {Pool, Client} = require('pg');
+/*const {Pool, Client} = require('pg');
 const connectionString = 'postgres://dqnazyotbfgvxt:485af557f315bf8f783a9e1ec8a006e70a30e25d2f6216ee6a4743bf61c91e0c@ec2-54-225-68-133.compute-1.amazonaws.com:5432/du78o8s03fo04';
 
 const pool = new Pool({
@@ -21,7 +21,7 @@ pool.query('select * from gpx;', (err, res) => {
   pool.end()
 })
 
-console.log("hi");
+console.log("hi");*/
 
 
 /*
