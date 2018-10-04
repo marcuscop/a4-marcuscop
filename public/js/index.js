@@ -215,8 +215,8 @@ function csv(){
 
 function get_gpx(){
 
-  xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = handle_res
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = handle_res;
   xhr.open("GET", "/gpx");
   xhr.send();
 
